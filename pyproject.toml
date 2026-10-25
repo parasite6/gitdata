@@ -1,0 +1,18 @@
+[build-system]
+requires = ["setuptools>=61"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "gitdata"
+version = "0.6.4"
+description = "GitHub REST repository reports for CLI and future GUI consumers"
+readme = "README.md"
+requires-python = ">=3.10"
+dependencies = ["httpx>=0.27,<1"]
+
+[project.scripts]
+gitdata = "github_repo_report.cli:main"
+github-report = "github_repo_report.cli:main"
+
+[tool.setuptools.packages.find]
+include = ["github_repo_report*"]
